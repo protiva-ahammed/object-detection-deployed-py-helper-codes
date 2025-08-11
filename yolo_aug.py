@@ -1,0 +1,413 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d50ff8c-d9bf-4c74-82b1-67989aa507d9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bdcde9c1-82f3-46be-8af3-482738f00fef",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c0f3daa1-fcb4-448d-bf4e-0719cfe493bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# from random import random\n",
+    "# import cv2,time,os,sys\n",
+    "# from tqdm import tqdm\n",
+    "# from glob import glob\n",
+    "# import numpy as np \n",
+    "# import pandas as pd\n",
+    "\n",
+    "# from pathlib import Path\n",
+    "# import logging\n",
+    "# import getopt\n",
+    "\n",
+    "# log = logging.getLogger(__name__)\n",
+    "# logging.basicConfig(level=logging.INFO)\n",
+    "\n",
+    "\n",
+    "# def main(argv):\n",
+    "#     help_str = 'yolo_aug.py' -i <input_dir> -t <aug_type (hflip,vflip,hvflip,bright)> -e <image extension (jpg,jpeg,png...)> -o <output_dir>'\n",
+    "\n",
+    "# try:\n",
+    "#     opts, args = getopt.getopt(\n",
+    "#         argv, \"hi:t:e:o:\",[\"input_dir=\",\"aug_type=\", \"image extension=\" ,\"output_dir=\"])\n",
+    "\n",
+    "#     expect getopt.GetoptError:\n",
+    "#         log.exception(help_str)\n",
+    "#         sys.exit(2)\n",
+    "#     for opt , agr in opts:\n",
+    "#         if opt == '-h':\n",
+    "#             log.info(help_str)\n",
+    "#             sys.exit()\n",
+    "\n",
+    "#         elif\n",
+    "#     )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3089c463-43b6-4536-912c-1e721249f52f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aee53e22-a2fc-4cd9-84f5-3613660644a5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2cbc1af6-21cd-4580-8466-c36dc160dcca",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a79ef448-ff9a-410e-9ead-e147889225d6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "4c6d30a9-69be-4789-a139-2c1df9a311a2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Collecting pandas\n",
+      "  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)\n",
+      "Requirement already satisfied: python-dateutil>=2.8.2 in ./myenv/lib/python3.8/site-packages (from pandas) (2.9.0.post0)\n",
+      "Requirement already satisfied: pytz>=2020.1 in ./myenv/lib/python3.8/site-packages (from pandas) (2024.1)\n",
+      "Collecting tzdata>=2022.1 (from pandas)\n",
+      "  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)\n",
+      "Requirement already satisfied: numpy>=1.20.3 in ./myenv/lib/python3.8/site-packages (from pandas) (1.23.0)\n",
+      "Requirement already satisfied: six>=1.5 in ./myenv/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)\n",
+      "Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)\n",
+      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m12.4/12.4 MB\u001b[0m \u001b[31m79.9 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m:00:01\u001b[0m00:01\u001b[0m\n",
+      "\u001b[?25hDownloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)\n",
+      "\u001b[2K   \u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m345.4/345.4 kB\u001b[0m \u001b[31m32.5 MB/s\u001b[0m eta \u001b[36m0:00:00\u001b[0m\n",
+      "\u001b[?25hInstalling collected packages: tzdata, pandas\n",
+      "Successfully installed pandas-2.0.3 tzdata-2024.1\n"
+     ]
+    }
+   ],
+   "source": [
+    "!pip install pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "b0c4c799-af20-4005-85cc-b48f6462bf77",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Requirement already satisfied: numpy in ./myenv/lib/python3.8/site-packages (1.23.0)\n"
+     ]
+    }
+   ],
+   "source": [
+    "!pip install numpy"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "6451890b-d49a-4c10-aebf-9a908565f4fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'log' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mGetoptError\u001b[0m                               Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[16], line 17\u001b[0m, in \u001b[0;36mmain\u001b[0;34m(argv)\u001b[0m\n\u001b[1;32m     16\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m---> 17\u001b[0m     opts, args \u001b[38;5;241m=\u001b[39m \u001b[43mgetopt\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mgetopt\u001b[49m\u001b[43m(\u001b[49m\n\u001b[1;32m     18\u001b[0m \u001b[43m        \u001b[49m\u001b[43margv\u001b[49m\u001b[43m,\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mhi:t:e:o:\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43minput_dir=\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43maug_type=\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mimage extension=\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m \u001b[49m\u001b[43m,\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43moutput_dir=\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m]\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     19\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m getopt\u001b[38;5;241m.\u001b[39mGetoptError:\n",
+      "File \u001b[0;32m/usr/lib/python3.8/getopt.py:95\u001b[0m, in \u001b[0;36mgetopt\u001b[0;34m(args, shortopts, longopts)\u001b[0m\n\u001b[1;32m     94\u001b[0m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[0;32m---> 95\u001b[0m         opts, args \u001b[38;5;241m=\u001b[39m \u001b[43mdo_shorts\u001b[49m\u001b[43m(\u001b[49m\u001b[43mopts\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43margs\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;241;43m0\u001b[39;49m\u001b[43m]\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m:\u001b[49m\u001b[43m]\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mshortopts\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43margs\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m:\u001b[49m\u001b[43m]\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     97\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m opts, args\n",
+      "File \u001b[0;32m/usr/lib/python3.8/getopt.py:195\u001b[0m, in \u001b[0;36mdo_shorts\u001b[0;34m(opts, optstring, shortopts, args)\u001b[0m\n\u001b[1;32m    194\u001b[0m opt, optstring \u001b[38;5;241m=\u001b[39m optstring[\u001b[38;5;241m0\u001b[39m], optstring[\u001b[38;5;241m1\u001b[39m:]\n\u001b[0;32m--> 195\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[43mshort_has_arg\u001b[49m\u001b[43m(\u001b[49m\u001b[43mopt\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mshortopts\u001b[49m\u001b[43m)\u001b[49m:\n\u001b[1;32m    196\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m optstring \u001b[38;5;241m==\u001b[39m \u001b[38;5;124m'\u001b[39m\u001b[38;5;124m'\u001b[39m:\n",
+      "File \u001b[0;32m/usr/lib/python3.8/getopt.py:211\u001b[0m, in \u001b[0;36mshort_has_arg\u001b[0;34m(opt, shortopts)\u001b[0m\n\u001b[1;32m    210\u001b[0m         \u001b[38;5;28;01mreturn\u001b[39;00m shortopts\u001b[38;5;241m.\u001b[39mstartswith(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124m:\u001b[39m\u001b[38;5;124m'\u001b[39m, i\u001b[38;5;241m+\u001b[39m\u001b[38;5;241m1\u001b[39m)\n\u001b[0;32m--> 211\u001b[0m \u001b[38;5;28;01mraise\u001b[39;00m GetoptError(_(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124moption -\u001b[39m\u001b[38;5;132;01m%s\u001b[39;00m\u001b[38;5;124m not recognized\u001b[39m\u001b[38;5;124m'\u001b[39m) \u001b[38;5;241m%\u001b[39m opt, opt)\n",
+      "\u001b[0;31mGetoptError\u001b[0m: option -f not recognized",
+      "\nDuring handling of the above exception, another exception occurred:\n",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[16], line 170\u001b[0m\n\u001b[1;32m    166\u001b[0m                 f\u001b[38;5;241m.\u001b[39mwrite(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124m'\u001b[39m)\n\u001b[1;32m    169\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;18m__name__\u001b[39m \u001b[38;5;241m==\u001b[39m \u001b[38;5;124m'\u001b[39m\u001b[38;5;124m__main__\u001b[39m\u001b[38;5;124m'\u001b[39m:\n\u001b[0;32m--> 170\u001b[0m     \u001b[43mmain\u001b[49m\u001b[43m(\u001b[49m\u001b[43msys\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43margv\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;241;43m1\u001b[39;49m\u001b[43m:\u001b[49m\u001b[43m]\u001b[49m\u001b[43m)\u001b[49m\n",
+      "Cell \u001b[0;32mIn[16], line 20\u001b[0m, in \u001b[0;36mmain\u001b[0;34m(argv)\u001b[0m\n\u001b[1;32m     17\u001b[0m     opts, args \u001b[38;5;241m=\u001b[39m getopt\u001b[38;5;241m.\u001b[39mgetopt(\n\u001b[1;32m     18\u001b[0m         argv,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mhi:t:e:o:\u001b[39m\u001b[38;5;124m\"\u001b[39m,[\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124minput_dir=\u001b[39m\u001b[38;5;124m\"\u001b[39m,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124maug_type=\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mimage extension=\u001b[39m\u001b[38;5;124m\"\u001b[39m ,\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124moutput_dir=\u001b[39m\u001b[38;5;124m\"\u001b[39m])\n\u001b[1;32m     19\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m getopt\u001b[38;5;241m.\u001b[39mGetoptError:\n\u001b[0;32m---> 20\u001b[0m     \u001b[43mlog\u001b[49m\u001b[38;5;241m.\u001b[39mexception(help_str)\n\u001b[1;32m     21\u001b[0m     sys\u001b[38;5;241m.\u001b[39mexit(\u001b[38;5;241m2\u001b[39m)\n\u001b[1;32m     23\u001b[0m \u001b[38;5;28;01mfor\u001b[39;00m opt, arg \u001b[38;5;129;01min\u001b[39;00m opts:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'log' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "from random import random\n",
+    "import cv2,time,os,sys\n",
+    "from tqdm import tqdm\n",
+    "from glob import glob\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "from pathlib import Path\n",
+    "import logging\n",
+    "import getopt\n",
+    "# log = logging.getLogger(__name__)\n",
+    "# logging.basicConfig(level=logging.INFO)\n",
+    "\n",
+    "def main(argv):\n",
+    "    help_str = 'yolo_aug.py -i <input_dir> -t <aug_type (hflip,vflip,hvflip,bright)> -e <image extension (jpg,jpeg,png ...)> -o <output_dir>'\n",
+    "\n",
+    "    try:\n",
+    "        opts, args = getopt.getopt(\n",
+    "            argv,\"hi:t:e:o:\",[\"input_dir=\",\"aug_type=\", \"image extension=\" ,\"output_dir=\"])\n",
+    "    except getopt.GetoptError:\n",
+    "        log.exception(help_str)\n",
+    "        sys.exit(2)\n",
+    "\n",
+    "    for opt, arg in opts:\n",
+    "        if opt == '-h':\n",
+    "            log.info(help_str)\n",
+    "            sys.exit()\n",
+    "        elif opt in (\"-i\", \"--input_dir\"):\n",
+    "            input_dir = arg\n",
+    "        elif opt in (\"-t\", \"--aug_type\"):\n",
+    "            aug_type = arg\n",
+    "        elif opt in (\"-e\", \"--image extension\"):\n",
+    "            image_ext = arg\n",
+    "        elif opt in (\"-o\", \"--output_dir\"):\n",
+    "            output_dir = arg\n",
+    "\n",
+    "    \n",
+    "    if aug_type == 'hflip':\n",
+    "        output_dir = output_dir + '/hflip_'+ time.strftime(\"%H%M%S\")\n",
+    "        out_dir = Path(output_dir)\n",
+    "        out_dir.mkdir(parents=True, exist_ok=True)\n",
+    "    elif aug_type == 'vflip':\n",
+    "        output_dir = output_dir + '/vflip_'+ time.strftime(\"%H%M%S\")\n",
+    "        out_dir = Path(output_dir)\n",
+    "        out_dir.mkdir(parents=True, exist_ok=True)\n",
+    "    elif aug_type == 'hvflip':\n",
+    "        output_dir = output_dir + '/hvflip_'+ time.strftime(\"%H%M%S\")\n",
+    "        out_dir = Path(output_dir)\n",
+    "        out_dir.mkdir(parents=True, exist_ok=True)\n",
+    "    elif aug_type == 'bright':\n",
+    "        output_dir = output_dir + '/bright_'+ time.strftime(\"%H%M%S\")\n",
+    "        out_dir = Path(output_dir)\n",
+    "        out_dir.mkdir(parents=True, exist_ok=True)\n",
+    "    else:\n",
+    "        log.error('Invalid augmentation type')\n",
+    "        log.exception(help_str)\n",
+    "        sys.exit(2)\n",
+    "            \n",
+    "\n",
+    "    log.info('Input directory: {}'.format(input_dir))\n",
+    "    log.info('Augmentation type: {}'.format(aug_type))\n",
+    "    log.info('Output directory: {}'.format(output_dir))\n",
+    "\n",
+    "    # --------- read yolo format label file -------------\n",
+    "    def boxesFromYOLO(imagePath,labelPath):\n",
+    "        image = cv2.imread(imagePath)\n",
+    "        (hI, wI) = image.shape[:2]\n",
+    "        lines = [line.rstrip('\\n') for line in open(labelPath)]\n",
+    "        boxes = []\n",
+    "        if lines != ['']:\n",
+    "            for line in lines:\n",
+    "                components = line.split(\" \")\n",
+    "                category = components[0]\n",
+    "                x  = int(float(components[1])*wI - float(components[3])*wI/2)\n",
+    "                y = int(float(components[2])*hI - float(components[4])*hI/2)\n",
+    "                h = int(float(components[4])*hI)\n",
+    "                w = int(float(components[3])*wI)\n",
+    "                boxes.append((category, (x, y, w, h)))\n",
+    "        return (hI, wI,image,boxes)\n",
+    "\n",
+    "    # -------- vertical flip function --------\n",
+    "    def flip_ver(image,boxes,H,W):\n",
+    "        txt_yolo = []\n",
+    "        img= cv2.flip(image,1)\n",
+    "        (H,W) = img.shape[:2]\n",
+    "        for box in boxes:\n",
+    "            class_name = int(box[0])\n",
+    "            (x, y, w, h) = box[1]\n",
+    "            x2 = ((W - x -w)+w/2)/W\n",
+    "            h2 = h/H\n",
+    "            w2 = w/W\n",
+    "            y2 = (y+(h/2))/H\n",
+    "            txt_yolo.append((class_name,round(x2,4),round(y2,4),round(w2,4),round(h2,4)))\n",
+    "        return img,txt_yolo\n",
+    "    # -------- horizontal and vertical flip function --------\n",
+    "    def flip_hor_ver(image,boxes,H,W):\n",
+    "        txt_yolo = []\n",
+    "        img= cv2.flip(image,-1)\n",
+    "        (H,W) = img.shape[:2]\n",
+    "        for box in boxes:\n",
+    "            class_name =int(box[0])\n",
+    "            (x, y, w, h) = box[1]\n",
+    "            x2 = ((W - x -w)+w/2)/W\n",
+    "            h2 = h/H\n",
+    "            w2 = w/W\n",
+    "            y2 =((H -y -h)+h/2)/H\n",
+    "            txt_yolo.append((class_name,round(x2,4),round(y2,4),round(w2,4),round(h2,4)))\n",
+    "        return img,txt_yolo\n",
+    "\n",
+    "    # -------- Horizontal flip function --------\n",
+    "    def flip_hor(image,boxes,H,W):\n",
+    "        txt_yolo = []\n",
+    "        img= cv2.flip(image,0)\n",
+    "        (H,W) = img.shape[:2]\n",
+    "        for box in boxes:\n",
+    "            class_name =int(box[0])\n",
+    "            (x, y, w, h) = box[1]\n",
+    "            x2 = (x+(w/2))/W\n",
+    "            h2 = h/H\n",
+    "            w2 = w/W\n",
+    "            y2 =((H -y -h)+h/2)/H\n",
+    "            txt_yolo.append((class_name,round(x2,4),round(y2,4),round(w2,4),round(h2,4)))\n",
+    "        return img,txt_yolo\n",
+    "    \n",
+    "    # -------- Brightness function --------\n",
+    "    def brightness_augment(img,boxes,H,W):\n",
+    "        hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV) #convert to hsv\n",
+    "        hsv = np.array(hsv, dtype=np.float64)\n",
+    "        factor = random()\n",
+    "        hsv[:, :, 2] = hsv[:, :, 2] * (factor + np.random.uniform()) #scale channel V uniformly\n",
+    "        hsv[:, :, 2][hsv[:, :, 2] > 255] = 255 #reset out of range values\n",
+    "        rgb = cv2.cvtColor(np.array(hsv, dtype=np.uint8), cv2.COLOR_HSV2RGB)\n",
+    "        (H,W) = img.shape[:2]\n",
+    "        txt_yolo = []\n",
+    "        for box in boxes:\n",
+    "            class_name =int(box[0])\n",
+    "            (x, y, w, h) = box[1]\n",
+    "            x2 = (x+(w/2))/W\n",
+    "            h2 = h/H\n",
+    "            w2 = w/W\n",
+    "            y2 =(y+(h/2))/H\n",
+    "            txt_yolo.append((class_name,round(x2,4),round(y2,4),round(w2,4),round(h2,4)))\n",
+    "        return rgb,txt_yolo\n",
+    "\n",
+    "    # -------- read image and label file -------------\n",
+    "    images = glob(input_dir + f'/*.{image_ext}')\n",
+    "\n",
+    "    for image_path in tqdm(images):\n",
+    "        (hI, wI,image,boxes) = boxesFromYOLO(image_path,image_path.replace(image_ext, 'txt'))\n",
+    "        if aug_type == 'hflip':\n",
+    "            img,txt_yolo = flip_hor(image,boxes,hI,wI)\n",
+    "        elif aug_type == 'vflip':\n",
+    "            img,txt_yolo = flip_ver(image,boxes,hI,wI)\n",
+    "        elif aug_type == 'hvflip':\n",
+    "            img,txt_yolo = flip_hor_ver(image,boxes,hI,wI)\n",
+    "        elif aug_type == 'bright':\n",
+    "            img,txt_yolo = brightness_augment(image,boxes,hI,wI)\n",
+    "        else:\n",
+    "            log.error('Unknown augmentation type: {}'.format(aug_type))\n",
+    "            sys.exit(2)\n",
+    "        cv2.imwrite(output_dir + '/' + image_path.split('/')[-1], img)\n",
+    "        with open(output_dir + '/' + image_path.split('/')[-1].replace(image_ext, 'txt'), 'w') as f:\n",
+    "            if txt_yolo != []:\n",
+    "                for box in txt_yolo:\n",
+    "                    f.write(f'{box[0]} {box[1]} {box[2]} {box[3]} {box[4]}\\n')\n",
+    "            else:\n",
+    "                f.write('')\n",
+    "\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    main(sys.argv[1:])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "913464a5-8001-4223-82f5-fdc41872e22d",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'archive' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[15], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# main(sys.argv[1:])\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m p1\u001b[38;5;241m=\u001b[39m\u001b[43marchive\u001b[49m\u001b[38;5;241m/\u001b[39mtfresized_data\u001b[38;5;241m/\u001b[39mimages\u001b[38;5;241m/\u001b[39mtrain\n\u001b[1;32m      3\u001b[0m p2\u001b[38;5;241m=\u001b[39marchive\u001b[38;5;241m/\u001b[39mtfresized_data\u001b[38;5;241m/\u001b[39mimages\u001b[38;5;241m/\u001b[39mtrain\u001b[38;5;241m/\u001b[39moutputdir\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'archive' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "# main(sys.argv[1:])\n",
+    "p1=archive/tfresized_data/images/train\n",
+    "p2=archive/tfresized_data/images/train/outputdir"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "71bb4646-d136-4f9a-9e21-cb3452ff1590",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (1272560658.py, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[14], line 1\u001b[0;36m\u001b[0m\n\u001b[0;31m    main1(yolo_aug.py -i p1 -t hflip -e jpg -o p2 )\u001b[0m\n\u001b[0m                         ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "main1(yolo_aug.py -i p1 -t hflip -e jpg -o p2 )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1950493f-9544-4a20-a717-8e55e5ded6f5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
